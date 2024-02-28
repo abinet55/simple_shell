@@ -9,12 +9,11 @@
 
 int main(int argc, char *argv[])
 {
-char *name;
 char *ch = NULL;
 size_t buff_size = 0;
 ssize_t file_access = 0;
 (void) argc;
-name = argv[0];
+(void) argv;
 while (1)
 {
 if (isatty(STDIN_FILENO) == 1)
@@ -70,7 +69,7 @@ return (call_comm(dir_arr));
 */
 void directive_not_found(char *dir)
 {
-char *name;
+char *name = "Error: Directive Not Found";
 write(2, name, str_len(name));
 write(2, ": 1: ", 5);
 write(2, dir, str_len(dir));
