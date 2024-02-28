@@ -68,9 +68,6 @@ return (call_comm(dir_arr));
 */
 void directive_not_found(char *dir)
 {
-char *name = "#cisfun$ ";
-write(1, name, str_len(name));
-write(1, "\n", 1);
 write(2, dir, str_len(dir));
 write(2, "./shell: No such file or directory\n", 36);
 }
