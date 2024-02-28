@@ -7,13 +7,12 @@
 * Return: always 0
 */
 
-int main(int argc, char *argv[])
+int main(int argc, __attribute__((unused)) char *argv[])
 {
 char *ch = NULL;
 size_t buff_size = 0;
 ssize_t file_access = 0;
-(void) argc;
-(void) argv;
+(void)argc;
 while (1)
 {
 if (isatty(STDIN_FILENO) == 1)
@@ -69,11 +68,11 @@ return (call_comm(dir_arr));
 */
 void directive_not_found(char *dir)
 {
-char *name = "Error: Directive Not Found";
-write(2, name, str_len(name));
-write(2, ": 1: ", 5);
+char *name = "#cisfun$ ";
+write(1, name, str_len(name));
+write(1, "\n", 1);
 write(2, dir, str_len(dir));
-write(2, ": NOT FOUND!!\n", 12);
+write(2, "./shell: No such file or directory\n", 36);
 }
 
 /**

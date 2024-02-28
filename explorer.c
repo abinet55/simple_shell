@@ -5,7 +5,6 @@
 * @dir: directives
 * Return: new path
 */
-
 char *shell_explorer(char *dir)
 {
 char *path = in_str_cp(env_get("PATH"));
