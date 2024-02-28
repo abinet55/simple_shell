@@ -8,7 +8,7 @@ int enviro_print(void)
 {
 	char *ch = environ[0];
 	int j = 0;
-	
+
 	while (ch)
 	{
 		write(1, ch, str_len(ch));
@@ -29,6 +29,7 @@ int enviro_print(void)
 int cmp_str(char *s1, char *s2, int n)
 {
 	char ch1, ch2;
+
 	while (n--)
 	{
 		ch1 = *s1++;
@@ -47,6 +48,7 @@ int cmp_str(char *s1, char *s2, int n)
 char *env_get(char *variable)
 {
 	int j = 0;
+
 	for (j = 0; environ[j]; j++)
 	{
 		if (cmp_str(environ[j], variable, str_len(variable)) == 0)

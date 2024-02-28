@@ -41,6 +41,13 @@ s2++;
 }
 return (*s1 - *s2);
 }
+
+/**
+ * str_cpy - copy strings
+ * @dest: destination of string
+ * @src: source of string
+ * Return: string
+ */
 char *str_cpy(char *dest, char *src)
 {
 int length, x;
